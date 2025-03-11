@@ -1,3 +1,6 @@
+// Define DOM elements
+const heroImage = document.querySelector("#hero__animation__img");
+
 const tl = document.querySelector("#grid__tl");
 const tr = document.querySelector("#grid__tr");
 const bl = document.querySelector("#grid__bl");
@@ -18,7 +21,7 @@ const projectTwo = document.querySelector(".p-2");
 const projectThree = document.querySelector(".p-3");
 
 // Define colors and positions
-const bgColor = "var(--corner)";
+const bgColor = "var(--bg)";
 const bgColorAlt = "var(--bg-alt)";
 const textColor = "var(--text)";
 const textColorAlt = "var(--text-alt)";
