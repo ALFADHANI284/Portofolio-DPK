@@ -1,0 +1,453 @@
+/* CUSTOM FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@media only screen and (max-width: 600px) {
+}
+/* GENERAL */
+* {
+  box-sizing: border-box; /* Termasuk padding dan border dalam total lebar dan tinggi elemen */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Mencegah geser horizontal */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.perkenalan {
+  color: #00b4f0;
+}
+
+h1,
+h2,
+h5,
+p {
+  margin: 0;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.1rem;
+}
+
+/* HERO */
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%; /* Pastikan lebar 100% */
+  max-width: 100vw; /* Mencegah melampaui lebar viewport */
+}
+
+#hero__animation {
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 25rem;
+  width: 25rem;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#hero__animation__img {
+  background-image: var(--tl-1);
+  height: 80%;
+  width: 160%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: -12%;
+}
+
+/* GRID COMMON STYLES */
+#grid {
+  position: absolute;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#grid__tl__btn,
+#grid__tr__btn,
+#grid__bl__btn,
+#grid__br__btn {
+  height: 18.75rem;
+  width: 18.75rem;
+  background: var(--corner);
+  color: var(--text);
+  border: var(--border);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  z-index: 100;
+  border-radius: 30%;
+  transition: transform 0.2s ease-in-out;
+}
+
+#grid__tl__content,
+#grid__tr__content,
+#grid__bl__content,
+#grid__br__content {
+  position: absolute;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  color: var(--text-alt);
+  width: 100%;
+}
+
+#grid__tl__btn,
+#grid__tr__btn {
+  padding-bottom: 0.5rem;
+  align-items: flex-end;
+}
+
+#grid__bl__btn,
+#grid__br__btn {
+  padding-top: 0.5rem;
+}
+
+#grid__tl__btn:active,
+#grid__br__btn:active {
+  transform: rotate(-45deg) scale(1.05);
+}
+
+#grid__tr__btn:active,
+#grid__bl__btn:active {
+  transform: rotate(45deg) scale(1.05);
+}
+
+/* RESPONSIVE GRID STYLES */
+@media (max-width: 1200px) {
+  #grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar sedang */
+  }
+}
+
+@media (max-width: 768px) {
+  #grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+  }
+}
+
+/* TOP LEFT CORNER */
+#grid__tl__btn {
+  top: -11.5rem;
+  left: -11.5rem;
+  transform: rotate(-45deg);
+}
+
+#grid__tl__content {
+  width: 30vw;
+  top: 10vh;
+  left: 0;
+  transform: translateX(-100vw) translateY(-100vh);
+}
+
+article {
+  background: (--bg-transparent);
+  font-size: 0.8rem;
+  list-style: none;
+  border: var(--border);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  width: 90%; /* Gunakan lebar responsif */
+  max-width: 20rem; /* Batasi lebar maksimum */
+  height: auto; /* Sesuaikan tinggi */
+}
+
+article h2 {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+article p {
+  padding-bottom: 0.3rem;
+}
+
+article h2,
+article p {
+  color: #333;
+}
+
+.teks {
+  font-size: 20px;
+  text-align: left;
+  margin: 0.3rem;
+}
+
+.logo-telkom {
+  width: 20px;
+}
+
+.icon-cv {
+  width: 50px;
+}
+
+.cards {
+  padding: 0;
+}
+
+.cards__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center cards */
+}
+
+.cards__content {
+  flex: 1 1 45%; /* Allow cards to grow and shrink */
+  margin: 1rem; /* Add margin for spacing */
+}
+
+@media (max-width: 768px) {
+  .cards__content {
+    flex: 1 1 100%; /* Full width on layar kecil */
+  }
+}
+
+/* TOP RIGHT CORNER */
+#grid__tr__btn {
+  top: -11.5rem;
+  right: -11.5rem;
+  transform: rotate(45deg);
+}
+
+#grid__tr__content {
+  width: 30vw;
+  top: 10vh;
+  right: 0;
+  transform: translateX(100vw) translateY(-100vh);
+}
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.experience__skill {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  gap: 0rem;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.experience__skill div {
+  display: flex;
+  align-items: center;
+  width: 9rem;
+  height: fit-content;
+}
+
+.experience__skill div img {
+  padding: 0;
+  margin-right: 0.5rem;
+}
+
+.experience__skill div h2 {
+  text-align: left;
+}
+
+.experience__skill div p {
+  padding: 0;
+}
+
+.experience__skill div h2,
+.experience__skill div p {
+  font-size: 0.8rem;
+}
+
+.experience__skill div div {
+  justify-content: space-between;
+}
+
+/* BOTTOM LEFT CORNER */
+#grid__bl__btn {
+  bottom: -11.5rem;
+  left: -11.5rem;
+  transform: rotate(45deg);
+}
+
+#grid__bl__content {
+  width: 15rem;
+  bottom: 15vh;
+  left: 0;
+  transform: translateX(-100vw) translateY(100vh);
+}
+
+.project {
+  display: flex;
+  width: 90%; /* Pastikan lebar responsif */
+  height: auto;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: auto auto 0.5rem;
+  border: var(--border);
+  background: var(--bg-alt);
+}
+
+.project__img {
+  width: 100%; /* Pastikan gambar mengambil lebar penuh dari kontainer mereka */
+  height: 50%; /* Pertahankan rasio aspek */
+  
+}
+
+.project__title {
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.button {
+  background: var(--btn);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  color: #00b4f0;
+  transition: all 300ms ease;
+  background-color: #ffffff;
+  border-radius: 0;
+  height: 3rem;
+  flex-basis: 50%;
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.arrow {
+  background: #ffffff;
+  color: #00b4f0;
+  transition: all 300ms ease;
+  border: var(--border);
+  width: 3rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0.2rem 0;
+  transition: all 300ms ease;
+}
+
+.btn:active,
+.arrow:active {
+  background: var(--bg-alt);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover,
+.arrow:hover {
+  cursor: pointer;
+}
+
+/* BOTTOM RIGHT CORNER */
+#grid__br__btn {
+  bottom: -11.5rem;
+  right: -11.5rem;
+  transform: rotate(-45deg);
+}
+
+#grid__br__content {
+  bottom: 0;
+  right: 0vw;
+  transform: translateX(100vw) translateY(100vh);
+}
+
+#grid__br__content div {
+  display: flex;
+  margin: 0.5rem auto;
+  gap: 1.2rem;
+  width: 17rem;
+}
+
+.contact-text {
+  color: var(--text);
+}
+
+.btn-contact {
+  border: var(--border);
+  border-radius: 2rem;
+}
+
+.resume {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.dwn {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.dwn:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.foto {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  align-items: left;
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-left: 6rem;
+}
+
+.Education {
+  text-align: left;
+  padding-bottom: 0.3rem;
+  font-size: 17px;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.a{
+  text-decoration: none;
+  color: #00b4f0;
+}
+
+.logo{
+  width: 18rem;
+  height: auto;
+  position: fixed;
+  margin-left: 3rem;
+  margin-top: 14rem;
+}
