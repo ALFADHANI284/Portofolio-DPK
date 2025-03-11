@@ -170,7 +170,7 @@ p {
 }
 
 article {
-  background: (--bg-transparent);
+  background: var(--bg-transparent);
   font-size: 0.8rem;
   list-style: none;
   border: var(--border);
