@@ -20,20 +20,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.perkenalan {
-  color: #00b4f0;
-}
-
 h1,
 h2,
 h5,
