@@ -18,7 +18,7 @@ body:after {
   --border: 0.01rem solid #000000;
   --text: #00b4f0;
   --text-alt: #00b4f0;
-  --sun: url(../assets/icons/sun.png);
+  --sun: url(assets/icons/sun.png);
 }
 
 /* DARK MODE */
@@ -27,11 +27,11 @@ body:after {
   --bg: #000000;
   --corner: #000000;
   --bg-alt: #000000;
-  --bg-alt-2: #ffffff;
-  --bg-transparent:#ffff;
+  --bg-alt-2: #cc5a5a;
+  --bg-transparent:transparent;
   --border: 0.01rem solid #ffffff;
   --text1: #000000;
-  --moon: url(../assets/icons/moon.png);
+  --moon: url(assets/icons/moon.png);
 }
 
 /* COLOR MODE TOGGLE BUTTON */
