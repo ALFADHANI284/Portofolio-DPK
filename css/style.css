@@ -146,6 +146,7 @@ p {
 }
 
 article {
+  color: #00b4f0;
   background: var(--bg-transparent);
   font-size: 0.8rem;
   list-style: none;
