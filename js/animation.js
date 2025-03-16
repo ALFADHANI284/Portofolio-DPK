@@ -323,7 +323,7 @@ blBtn.onclick = function () {
     playClosingAnimation("reverse-animate-bottom-left");
   } else {
     tlBtn.innerHTML = "Tentang";
-    trBtn.innerHTML = "Experience";
+    trBtn.innerHTML = "Skill";
     brBtn.innerHTML = "Contact";
 
     // Setting activeCorner
