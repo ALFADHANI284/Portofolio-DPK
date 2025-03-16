@@ -38,7 +38,7 @@ p {
   position: relative;
   color: #00b4f0;
   text-align: center;
-  margin-top: 10rem;
+  top: 200px;
 }
 
 /* GRID COMMON STYLES */
@@ -140,7 +140,6 @@ article {
   border: var(--border);
   border-radius: 2rem;
   padding: 0.5rem;
-  margin: 1rem;
   width: 90%; /* Gunakan lebar responsif */
   max-width: 20rem; /* Batasi lebar maksimum */
   height: auto; /* Sesuaikan tinggi */
